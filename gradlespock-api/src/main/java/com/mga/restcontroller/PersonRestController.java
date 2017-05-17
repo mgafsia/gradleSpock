@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Collection;
 
 @Controller
-@RequestMapping("/api/persons")
+@RequestMapping("/persons")
 public class PersonRestController {
 
     @Autowired
