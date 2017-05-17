@@ -1,9 +1,11 @@
 buildscript {
+    ext { springBootVersion = '1.5.2.RELEASE' }
+
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
@@ -13,8 +15,8 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'gs-rest-service'
-    version =  '0.1.0'
+    baseName = 'gradlespock-api'
+    version =  '0.1.0-SNAPSHOT'
 }
 
 repositories {
@@ -25,8 +27,9 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
