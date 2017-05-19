@@ -1,4 +1,5 @@
 rootProject.name='gradlespock'
 
 include 'gradlespock-api'
+include 'gradlespock-test'
 
