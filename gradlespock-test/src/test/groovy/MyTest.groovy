@@ -1,7 +1,7 @@
 import spock.lang.Specification
 
 /**
- * Created by slah on 17/05/2017.
+ * Created on 17/05/2017.
  */
 class MyTest extends Specification {
     def "my test"() {
@@ -11,6 +11,5 @@ class MyTest extends Specification {
             list.add(1)
         then:
             2 == list.get(0)
-
     }
 }
